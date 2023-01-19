@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/* NAVIGATION BAR */
+.logo {
+    text-decoration: none;
+    font-size: 50px;
+    color: white;
+    margin-left: -50px;
+}
+
+nav {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    height: 100px;
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+    transition: 0.5s ease-in-out;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding:  15px 25px;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(223, 141, 255, 0.8);
+    border-radius: 10px;
+}
+
+.contact, .watch {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    padding: 5px 19px;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+.watch {
+    font-size: 15px;
+    color: #4C2657;
+    border-radius: 0;
+    display: none;
+}
+
+.contact:hover {
+    border-color: white;
+    color: white;
+    background-color:  rgba(223, 141, 255, 0.8);;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    padding-left: 35px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media screen and (max-width: 1246px) {
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding:  10px 20px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .burger {
+        display: block;
+    }
+
+    .burger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .burger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    ul {
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        margin: auto;
+    }
+
+    nav ul li {
+        margin: 16px 0;
+    }
+
+    nav ul li a {
+        color: #4C2657;
+        text-align: center;
+    }
+
+    ul.active {
+        left: 0;
+    }
+
+    nav.active {
+        background-color: #4C2657;
+        transition: 0.7s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 721px) {
+    .burger {
+        margin-left: 50%;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .watch {
+        display: inline-block;
+    }
+}
+
+
+/* JS CLASS */
+.navbar-scrolled {
+    background-color: white;
+    transition: 0.5s ease-in-out;
+}
+
+.changecolor {
+    color: purple;
+    transition: 0.5s ease-in-out;
+}
+
+.changebg {
+    background-color: purple;
+    transition: 0.5s ease-in-out;
+}
+
+.changeborder {
+    color: purple;
+    border-color: purple;
+    transition: 0.5s ease-in-out;
+}
+
+.changeborder {
+    color: purple;
+    border-color: purple;
+    transition: 0.5s ease-in-out;
+}
+
+/* BANNER */
+.banner {
+    width: 100vw;
+    height: 75vh;
+    background: url('../pages/img\ 2/cover.png');
+    background-position: bottom;
+    background-size: cover;
+}
+
+.banner-text {
+    color: white;
+    position: relative;
+    top: 35%;
+    left: 15%;
+    max-width: 70%;
+}
+
+.banner-text h1 {
+    font-size: 100px;
+    font-weight: 800;
+    height: 120px;
+    margin-top: -40px;
+    margin-left: -5px;
+}
+
+.banner-text h6 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.banner-text h6:last-child {
+    margin-top: 20px;
+}
+
+svg {
+    position: relative;
+    top: 25%;
+    z-index: 5;
+}
+
+@media screen and (max-width: 1373px) {
+    #banner {
+        height: 78vh;
+    }
+
+    svg{
+        top: 25%;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    #banner {
+        height: 60vh;
+    }
+
+    svg{
+        top: 45%;
+    }
+
+    .banner-text {
+        top: 150px;
+    }
+
+    .banner-text h1 {
+        font-size: 80px;
+        margin-top: -25px;
+    }
+
+    .banner-text h6 {
+        font-size: 25px;
+    }
+
+    .banner-text h6:last-child {
+        margin-top: -10px;
+    }
+    
+}
+
+@media screen and (max-width: 930px) {
+    #banner {
+        height: 80vh;
+    }
+
+    svg{
+        top: 35%;
+    }
+
+    .banner-text {
+        top: 200px;
+    }
+
+    .banner-text h1 {
+        font-size: 100px;
+        margin-top: 5px;
+        line-height: 80px;
+    }
+
+    .banner-text h6:last-child {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #banner {
+        height: 60vh;
+    }
+
+    svg{
+        top: 50%;
+    }
+
+    .banner-text {
+        top: 150px;
+    }
+
+    .banner-text h1 {
+        font-size: 70px;
+        margin-top: 5px;
+        line-height: 60px;
+    }
+
+    .banner-text h6 {
+        font-size: 20px;
+    }
+
+    .banner-text h6:last-child {
+        margin-top: 10px;
+    }
+}
+
+/* MOVIE REVIEW CARDS */
+#container {
+    padding: 200px;
+    background-color: purple;
+    position: relative;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 30px;
+    max-width: 870px;
+    margin: auto;
+    justify-content: center;
+    justify-items: center;
+}
+
+.card {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.5);
+
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 500ms ease-in-out;
+}
+
+.card .image {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.review {
+    padding: 0 20px 20px 20px;
+}
+
+.title {
+    font-size: 10px;
+    padding: 30px 20px 10px 20px;
+}
+
+
+/* JAVASCRIPT */
+.show {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 500ms ease-in-out;
+}
+
+/* ANIMATION */
+.floaters {
+    position: absolute;
+    top: 1100px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: purple;
+}
+
+@media screen and (max-width: 1400px) {
+    .floaters {
+        bottom: -1000px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .floaters {
+        bottom: -800px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .floaters {
+        bottom: -2900px;
+    }
+}
+
+.floaters li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    animation: animate 20s linear infinite;
+    bottom: -200px;
+    clip-path: circle();
+}
+
+.floaters li:nth-child(1) {
+    left: 86%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+    background-color: aqua;
+}
+
+.floaters li:nth-child(2) {
+    left: 12%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 1.5s;
+    background-color: aqua;
+}
+
+.floaters li:nth-child(2) {
+    left: 12%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+    background-color: aqua;
+}
+
+.floaters li:nth-child(3) {
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 5.5s;
+    background-color: aqua;
+}
+
+.floaters li:nth-child(4) {
+    left: 42%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+    background-color: aqua;
+}
+
+.floaters li:nth-child(5) {
+    left: 65%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 0s;
+    background-color: aqua;
+}
+
+.floaters li:nth-child(6) {
+    left: 15%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3.5s;
+    background-color: aqua;
+}
+
+.floaters li:nth-child(7) {
+    left: 33%;
+    width: 180px;
+    height: 180px;
+    animation-delay: 3s;
+    background-color: aqua;
+    animation-duration: 5s;
+}
+
+.floaters li:nth-child(8) {
+    left: 95%;
+    width: 180px;
+    height: 180px;
+    animation-delay: 2s;
+    background-color: aqua;
+    animation-duration: 17s;
+}
+
+.floaters li:nth-child(8) {
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    animation-delay: 6s;
+    background-color: aqua;
+    animation-duration: 11s;
+}
+
+.floaters li:nth-child(8) {
+    left: 28%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+    background-color: aqua;
+    animation-duration: 14s;
+}
+
+.floaters li:nth-child(9) {
+    left: 97%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 0s;
+    background-color: aqua;
+    animation-duration: 8s;
+}
+
+.floaters li:nth-child(9) {
+    left: 97%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 0s;
+    background-color: aqua;
+    animation-duration: 8s;
+}
+
+.floaters li:nth-child(10) {
+    left: 85%;
+    width: 75px;
+    height: 75px;
+    animation-delay: 4s;
+    background-color: aqua;
+    animation-duration: 11s;
+}
+
+.floaters li:nth-child(11) {
+    left: 14%;
+    width: 66px;
+    height: 66px;
+    animation-delay: 7s;
+    background-color: aqua;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-1000%);
+        opacity: 0;
+    }
+}

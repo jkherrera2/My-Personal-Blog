@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../pages/coming-soon.css">
+    <link rel="shortcut icon" href="../img/favicon.png" type="x-icon">
+    <script src="../pages/coming-soon.js" defer></script>
+    <title>Jspace: Coming Soon</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <h1><a href="../home.html" class="logo">Jspace</a></h1>
+            <ul>
+                <li><a href="../home.html" id="home" class="link">Home</a></li>
+                <li><a href="../pages/mov-list.html" id="mov-list" class="link">Movie Lists</a></li>
+                <li><a href="../pages/mov-review.html" id="mov-review" class="link">Movie Reviews</a></li>
+                <li><a href="../pages/coming-soon.html" id="come-soon" class="link">Coming Soon</a></li>
+                <li><a href="../pages/about.html" id="about">About</a></li>
+                <li><a href="../pages/contacts.html" class="watch">Watch with me!</a></li>
+            </ul>
+            <div class="burger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <h2><a href="../pages/contacts.html" class="contact">Watch with me!</a></h2>
+        </nav>
+    </header>
+
+    <!-- BANNER -->
+    <div class="gradient">    
+        <div id="banner">
+        <section class="banner-text">
+            <h6>W H A T' S</h6>
+            <h1>COMING SOON</h1>
+            <h6>THE MOVIES I ANTICIPATE</h6>
+
+            <section class="movies">
+                <h2 id="title">John Wick: Chapter 4</h2>
+                <p>Chad Stahelski and Keanu Reeves’ blockbuster action franchise finally reaches theaters in 2023 after a two-year delay caused by the COVID-19 pandemic. We don’t know much about the film, except that John Wick is at war with — and possibly presumed dead by — the High Table, and Stahelski has gone on record to say that there is a possibility that Chapter 4 will not be a “happy ending” for its central character (Rotten Tomatoes).</p>
+            </section>
+        </section>
+    </div></div>
+
+    <div class="wrapper">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="navigator" id="rbtn1">
+                <input type="radio" name="navigator" id="rbtn2">
+                <input type="radio" name="navigator" id="rbtn3">
+                <input type="radio" name="navigator" id="rbtn4">
+                <input type="radio" name="navigator" id="rbtn5">
+            
+            <!-- IMAGE SLIDES -->
+            <div class="slide first">
+                <img src="../pages/img 2/johnwick.png" alt="">
+            </div>
+    
+            <div class="slide">
+                <img src="../pages/img 2/mission.png" alt="">
+            </div>
+    
+            <div class="slide">
+                <img src="../pages/img 2/gotg3.png" alt="">
+            </div>
+    
+            <div class="slide">
+                <img src="../pages/img 2/quantumania.png" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="../pages/img 2/spiderverse.png" alt="">
+            </div>
+
+            <!-- MANUAL SWIPE NAVIGATIONS -->
+            <div class="manual-navigation">
+                <label for="rbtn1" class="manual-btn"></label>
+                <label for="rbtn2" class="manual-btn"></label>
+                <label for="rbtn3" class="manual-btn"></label>
+                <label for="rbtn4" class="manual-btn"></label>
+                <label for="rbtn5" class="manual-btn"></label>
+            </div>
+
+            <!-- AUTO SWIPE NAVIGATORS -->
+            <div class="auto-swipe">
+                <div class="abtn1"></div>
+                <div class="abtn2"></div>
+                <div class="abtn3"></div>
+                <div class="abtn4"></div>
+                <div class="abtn5"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="gradient2"></div>
+
+    <script type="text/javascript">
+        var description = document.querySelector('p');
+        var title = document.getElementById('title');
+        var counter = 1;
+
+        setInterval(function(){
+            document.getElementById('rbtn' + counter).checked = true;
+            if(counter == 1){
+                title.innerHTML = 'John Wick: Chapter 4'
+                description.textContent = 'Chad Stahelski and Keanu Reeves’ blockbuster action franchise finally reaches theaters in 2023 after a two-year delay caused by the COVID-19 pandemic. We don’t know much about the film, except that John Wick is at war with — and possibly presumed dead by — the High Table, and Stahelski has gone on record to say that there is a possibility that Chapter 4 will not be a “happy ending” for its central character (Rotten Tomatoes).'
+                counter++;
+                if(counter > 5) {
+                counter = 1;
+                }
+            }else if(counter == 2){
+                title.innerHTML = 'Mission: Impossible - Dead Reckoning, Part One'
+                description.textContent = 'This was the slot originally reserved for Mission: Impossible 8, but with COVID being what it is, we’re now getting M:I 7 in 2023 and M:I 8 in 2024. In any case, when this movie hits theaters, Tom Cruise will have played Ethan Hunt for a whopping 27 years. Where does the time go? This installment brings back familiar franchise faces like Simon Pegg, Ving Rhames, Rebecca Ferguson, Henry Czerny, and Vanessa Kirby, with Esai Morales playing the primary villain (Rotten Tomatoes).'
+                counter++;
+                if(counter > 5) {
+                counter = 1;
+                }
+            }else if(counter == 3){
+                title.innerHTML = 'Guardians of The Galaxy Vol. 3'
+                description.textContent = 'Writer-director James Gunn’s follows his giddily irreverent 2021 effort The Suicide Squad with the latest Guardians, which is sure to have a winning Chris Pratt, an awesome mix — see what we did there? — of other actors, and, we’re just guessing, plenty of comedic hijinks. We also know that Will Poulter is set to play Adam Warlock, who was teased at the end of Vol. 2 (Rotten Tomatoes).'
+                counter++;
+                if(counter > 5) {
+                counter = 1;
+                }
+            }else if(counter == 4){
+                title.innerHTML = 'Ant-Man and The Wasp: Quantumania'
+                description.textContent = 'It may have been delayed a year, but Paul Rudd & Co. are back for round three of this delightful franchise, which promises some exciting casting: namely, Jonathan Majors as supervillain Kang the Conqueror and Bill Murray as… something (Rotten Tamotoes).'
+                counter++;
+                if(counter > 5) {
+                counter = 1;
+                }
+            }else{
+                title.innerHTML = 'Spider-Man: Across the Spider-Verse'
+                description.textContent = 'The Oscar-winning animated Spider-Man: Into the Spider-Verse was a big hit with critics and audiences, and Across the Spider-Verse was one of the most anticipated of 2022… until it got moved to 2023. Shameik Moore will voice Miles Morales again, with Hailee Steinfeld’s Gwen Stacy and Oscar Isaac’s Miguel O’Hara (aka Spider-Man 2099) joining him. We also know that Issa Rae is set to voice Jessica Drew (aka Spider-Woman), and it’s likely that Jake Johnson’s Peter Parker will be back as well (Rotten Tomatoes).'
+                counter++;
+                if(counter > 5) {
+                counter = 1;
+                }
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

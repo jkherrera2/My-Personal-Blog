@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./home.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="x-icon">
+    <script src="./home.js" defer></script>
+    <title>Jspace</title>
+</head>
+<body>
+    <nav id="navbar">
+        <h1><a href="./home.html" class="logo">Jspace</a></h1>
+        <ul>
+            <li><a href="./home.html" id="home">Home</a></li>
+            <li><a href="./pages/mov-list.html" id="mov-list">Movie Lists</a></li>
+            <li><a href="./pages/mov-review.html" id="mov-review">Movie Reviews</a></li>
+            <li><a href="./pages/coming-soon.html" id="come-soon">Coming Soon</a></li>
+            <li><a href="./pages/about.html" id="about">About</a></li>
+            <li><a href="./pages/contacts.html" class="watch">Watch with me!</a></li>
+        </ul>
+        <div class="burger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <h2><a href="./pages/contacts.html" class="contact">Watch with me!</a></h2>
+    </nav>
+
+    <header>
+        <!-- HERO PAGE -->
+        <div id="bg">
+            <div id="hero-page" class="hero-page">
+                <section class="hero-text">
+                    <h6>HELLO THERE!</h6>
+                    <h1>WELCOME TO JOHN'S JSPACE!</h1>
+                    <p>
+                        A personal blog that shows my love for movies. If you need a movie recommendations, you're in the right place.
+                    </p>
+                </section>
+                <section class="hero-pics">
+                    <div class="blur-circle"></div>
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <img src="./img/memoji.png" alt="memoji" class="memoji">
+                    <img src="./img/popcorn.png" alt="popcorn" class="popcorn">
+                    <img src="./img/camera.png" alt="camera" class="camera">
+                </section>
+            </div>
+        </div>    
+    </header>
+
+    <!-- PAGE 2 -->
+    <div id="page2">
+        <h1>MY RECENTLY WATCHED MOVIES</h1>
+        <div class="wrapper2">
+            <div id="cards">
+                <div class="card">
+                    <div class="cardholder"><img src="./img/recent1.png" alt="Miss granny"></div>
+                    <h3>Miss Granny</h3>
+                </div>
+
+                <div class="card">
+                    <div class="cardholder"><img src="./img/recent3.png" alt="Miss granny"></div>
+                    <h3>Thor: Love and Thunder</h3>
+                </div>
+
+                <div class="card">
+                    <div class="cardholder"><img src="./img/recent2.png" alt="Miss granny"></div>
+                    <h3>Black Panther: Wakanda Forever</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div id="page3">
+        <div class="wrapper3">
+            <div><h1>
+                Which genre of movies do I like the most?</h1></div>
+            <div>
+                <section>
+                    <h2 style="color: #9F73AB;">Psychological</h2>
+                    <h2 style="color: #9F73AB;">Thriller</h2>
+                    <h2 style="color: #824593;">Superhero</h2>
+                    <h2 style="color: #5F438F;">Romance</h2>
+                    <h2 style="color: #5B2E68;">Comedy</h2>
+                    <h2 style="color: #3D1848;">Action</h2>
+                </section>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4C2657" fill-opacity="1" d="M0,160L30,138.7C60,117,120,75,180,90.7C240,107,300,181,360,176C420,171,480,85,540,74.7C600,64,660,128,720,149.3C780,171,840,149,900,128C960,107,1020,85,1080,106.7C1140,128,1200,192,1260,192C1320,192,1380,128,1410,96L1440,64L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
+    </div>
+
+    <!-- PAGE 4 -->
+    <div id="page4">
+        <div class="wrapper4">
+            <div class="quote">
+                <h1>We're the same</h1>
+                <h1>you and I.</h1>
+                <h1>Just a couple of</h1>
+                <h1>hot-headed fools.</h1>
+                <h4>Thor from Thor: Ragnarok (2017)</h4>
+            </div>
+            <div class="memoji2">
+                <img class="thor" src="./img/thor.png" alt="thor">
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <footer>
+            <button onclick="scroll_Top()">BOP TO THE TOP</button>
+            <p>This is a machine project created by J.K. Herrera from University of the Philippines Baguio.</p>
+        </footer>
+    </div>
+</body>
+</html>

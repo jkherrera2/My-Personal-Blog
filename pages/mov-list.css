@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+
+/* NAVIGATION BAR */
+.logo {
+    text-decoration: none;
+    font-size: 50px;
+    color: white;
+    margin-left: -50px;
+}
+
+nav {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    height: 100px;
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+    transition: 0.5s ease-in-out;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding:  15px 25px;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(223, 141, 255, 0.8);
+    border-radius: 10px;
+}
+
+.contact, .watch {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    padding: 5px 19px;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+.watch {
+    font-size: 15px;
+    color: #4C2657;
+    border-radius: 0;
+    display: none;
+}
+
+.contact:hover {
+    border-color: white;
+    color: white;
+    background-color:  rgba(223, 141, 255, 0.8);;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    padding-left: 35px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media screen and (max-width: 1246px) {
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding:  10px 20px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .burger {
+        display: block;
+    }
+
+    .burger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .burger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    ul {
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        margin: auto;
+    }
+
+    nav ul li {
+        margin: 16px 0;
+    }
+
+    nav ul li a {
+        color: #4C2657;
+        text-align: center;
+    }
+
+    ul.active {
+        left: 0;
+    }
+
+    nav.active {
+        background-color: #4C2657;
+        transition: 0.7s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 721px) {
+    .burger {
+        margin-left: 50%;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .watch {
+        display: inline-block;
+    }
+}
+
+
+/* JS CLASS */
+.navbar-scrolled {
+    background-color: white;
+    transition: 0.5s ease-in-out;
+}
+
+.changecolor {
+    color: purple;
+    transition: 0.5s ease-in-out;
+}
+
+.changebg {
+    background-color: purple;
+    transition: 0.5s ease-in-out;
+}
+
+.changeborder {
+    color: purple;
+    border-color: purple;
+    transition: 0.5s ease-in-out;
+}
+
+/* BANNER */
+#banner {
+    width: 100vw;
+    height: 75vh;
+    background: url('../pages/img\ 2/cover.png');
+    background-position: bottom;
+    background-size: cover;
+}
+
+.banner-text {
+    color: white;
+    position: relative;
+    top: 35%;
+    left: 15%;
+    max-width: 70%;
+}
+
+.banner-text h1 {
+    font-size: 100px;
+    font-weight: 800;
+    height: 120px;
+    margin-top: -40px;
+    margin-left: -5px;
+}
+
+.banner-text h6 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.banner-text h6:last-child {
+    margin-top: 20px;
+}
+
+svg {
+    position: relative;
+    top: 25%;
+    z-index: 5;
+}
+
+@media screen and (max-width: 1100px) {
+    #banner {
+        height: 65vh;
+    }
+
+    svg{
+        top: 25%;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    #banner {
+        height: 80vh;
+    }
+
+    svg{
+        top: 35%;
+    }
+
+    .banner-text {
+        top: 200px;
+    }
+
+    .banner-text h1 {
+        font-size: 100px;
+        margin-top: 5px;
+        line-height: 80px;
+    }
+
+    .banner-text h6 {
+        font-size: 25px;
+    }
+
+    .banner-text h6:last-child {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #banner {
+        height: 83vh;
+    }
+
+    svg{
+        top: 40%;
+    }
+}
+
+/* MOVIE PAGES */
+#page2 {
+    width: 100vw;
+    height: 110vh;
+    background-color:#95709C;
+}
+
+#page3 {
+    width: 100vw;
+    height: 120vh;
+    background-color:#A3C7D6;
+}
+
+#page4 {
+    width: 100vw;
+    height: 120vh;
+    background-color:#624F82;
+}
+
+#page5 {
+    width: 100vw;
+    height: 100vh;
+    background-color:#95709C;
+}
+
+.wrapper {
+    width: auto;
+    max-width: 80vw;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: auto;
+    transform: translateY(20vh);
+    padding: 40px;
+    font-weight: 500;
+    color: white;
+}
+
+.wrapper:first-of-type {
+    transform: translateY(25vh);
+}
+
+/* MOVIE LISTS */
+.texts h3 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 5vw;
+    text-align: center;
+    color: black;
+}
